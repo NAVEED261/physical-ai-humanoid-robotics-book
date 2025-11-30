@@ -1,0 +1,49 @@
+name: Deploy Docusaurus site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./docusaurus
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Fetch all commits and branches for `docusaurus-gh-pages` branch
+          # to make sure the build is reproducible.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+          cache-dependency-path: ./docusaurus/package-lock.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Docusaurus website
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docusaurus/build
+          # The following options are important for docusaurus multi-site deployments
+          # if you're deploying a non-root site. For a single site, you can likely omit.
+          # If you have a custom domain, you can specify it here.
+          # cname: example.com
+          # or if you're deploying a subpath
+          # publish_branch: gh-pages
+          # destination_dir: .
+

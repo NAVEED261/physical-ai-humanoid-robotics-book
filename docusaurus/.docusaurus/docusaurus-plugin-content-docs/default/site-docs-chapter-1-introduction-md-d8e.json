@@ -1,0 +1,16 @@
+{
+  "id": "chapter1/introduction",
+  "title": "Chapter 1: Introduction to Physical AI and Humanoid Robotics",
+  "description": "This chapter introduces the fundamental concepts of Physical AI and Humanoid Robotics.",
+  "source": "@site/docs/chapter1/introduction.md",
+  "sourceDirName": "chapter1",
+  "slug": "/chapter1/introduction",
+  "permalink": "/docs/chapter1/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/NAVEED261/physical-ai-humanoid-robotics-book/tree/main/docusaurus/docs/chapter1/introduction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar"
+}
