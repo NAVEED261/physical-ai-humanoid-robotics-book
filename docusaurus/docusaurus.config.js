@@ -43,9 +43,9 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.  Edit with : `npx docusaurus blog:edit --locale en`
           editUrl:
             'https://github.com/NAVEED261/physical-ai-humanoid-robotics-book/tree/main/docusaurus/',
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

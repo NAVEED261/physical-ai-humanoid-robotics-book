@@ -31,7 +31,7 @@ function RAGChatbot() {
   };
 
   return (
-    <div style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '8px', marginTop: '20px' }}>
+    <div className="RAGChatbot">
       <h3>Ask the Textbook</h3>
       <form onSubmit={handleSubmit}>
         <input
@@ -46,7 +46,7 @@ function RAGChatbot() {
         </button>
       </form>
       {response && (
-        <div style={{ marginTop: '15px', padding: '10px', background: '#f0f0f0', borderRadius: '5px' }}>
+        <div className="response-box">
           <p><strong>Response:</strong> {response}</p>
         </div>
       )}

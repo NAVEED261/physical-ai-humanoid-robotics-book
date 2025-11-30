@@ -30,7 +30,8 @@ export default {
         },
         "blog": {
           "showReadingTime": true,
-          "editUrl": "https://github.com/NAVEED261/physical-ai-humanoid-robotics-book/tree/main/docusaurus/"
+          "editUrl": "https://github.com/NAVEED261/physical-ai-humanoid-robotics-book/tree/main/docusaurus/",
+          "onUntruncatedBlogPosts": "ignore"
         },
         "theme": {
           "customCss": "D:\\physical-ai-humanoid-robotics-book\\physical-ai-humanoid-robotics-book\\docusaurus\\src\\css\\custom.css"

@@ -27,7 +27,7 @@ function Auth() {
   };
 
   return (
-    <div style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '8px', marginTop: '20px', maxWidth: '400px', margin: '20px auto' }}>
+    <div className="AuthComponent">
       <h3>{isLogin ? 'Login' : 'Sign Up'}</h3>
       <form onSubmit={handleAuth}>
         <div style={{ marginBottom: '10px' }}>
@@ -65,7 +65,7 @@ function Auth() {
           {isLogin ? 'Sign Up' : 'Login'}
         </button>
       </p>
-      {message && <p style={{ marginTop: '10px', color: email === 'test@example.com' && password === 'password' ? 'green' : 'red' }}>{message}</p>}
+      {message && <p className={`message ${email === 'test@example.com' && password === 'password' ? 'success' : 'error'}`}>{message}</p>}
     </div>
   );
 }

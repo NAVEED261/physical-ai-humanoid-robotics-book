@@ -38,6 +38,46 @@ export default [
     exact: true
   },
   {
+    path: '/blog',
+    component: ComponentCreator('/blog', 'b1c'),
+    exact: true
+  },
+  {
+    path: '/blog/archive',
+    component: ComponentCreator('/blog/archive', '182'),
+    exact: true
+  },
+  {
+    path: '/blog/authors',
+    component: ComponentCreator('/blog/authors', '0b7'),
+    exact: true
+  },
+  {
+    path: '/blog/tags',
+    component: ComponentCreator('/blog/tags', '287'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/ai',
+    component: ComponentCreator('/blog/tags/ai', '094'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/robotics',
+    component: ComponentCreator('/blog/tags/robotics', '001'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/welcome',
+    component: ComponentCreator('/blog/tags/welcome', 'cd5'),
+    exact: true
+  },
+  {
+    path: '/blog/welcome',
+    component: ComponentCreator('/blog/welcome', 'e0a'),
+    exact: true
+  },
+  {
     path: '/docs',
     component: ComponentCreator('/docs', 'f9c'),
     routes: [
